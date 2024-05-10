@@ -13,3 +13,7 @@ This Python script utilizes the selenium library, a Python port of Selenium, to 
 Puppeteer Web Scraping for Logging in and Extracting Data
 
 This Python script utilizes the pyppeteer library, a Python port of Puppeteer, to automate the process of logging into a website and extracting product data.
+
+CSV IMAGE :
+
+![VoltaB2B CSV](image.jpg)
