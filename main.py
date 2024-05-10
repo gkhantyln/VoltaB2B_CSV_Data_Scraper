@@ -33,8 +33,8 @@ async def main():
         writer.writerow(["Ürün Barkod Kodu", "Ürün Adı", "Fiyat", "Ürün Resmi"])
 
         for product in products:
-            product_name = await product.querySelectorEval('.card-title', '(element) => element.textContent')
-            product_barcode = await product.querySelectorEval('.text-muted', '(element) => element.textContent')
+            product_name = await product.querySelectorEval('.h5.card-title strong', '(element) => element.textContent')
+            product_barcode = await product.querySelectorEval('.card-title', '(element) => element.textContent')
             product_price = await product.querySelectorEval('.discount', '(element) => element.textContent')
             product_image = await product.querySelectorEval('img', '(element) => element.getAttribute("src")')
 
