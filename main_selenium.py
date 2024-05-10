@@ -67,8 +67,8 @@ def write_to_csv(products, filename):
             writer.writerow(["Ürün Barkod Kodu", "Ürün Adı", "Fiyat", "Ürün Resmi"])
             for product in products:
                 try:
-                    product_name = product.find_element(By.CSS_SELECTOR, '.card-title').text.strip()
-                    product_barcode = product.find_element(By.CSS_SELECTOR, '.text-muted').text.strip()
+                    product_barcode = product.find_element(By.CSS_SELECTOR, '.card-title').text.strip()
+                    product_name = product.find_element(By.CSS_SELECTOR, 'h5.card-title strong').text.strip()
                     product_price = product.find_element(By.CSS_SELECTOR, '.discount').text.strip()
                     product_image = product.find_element(By.CSS_SELECTOR, 'img').get_attribute('src')
                     writer.writerow([product_barcode, product_name, product_price, product_image])
